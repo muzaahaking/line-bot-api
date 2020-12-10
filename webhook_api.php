@@ -14,16 +14,15 @@ foreach ($request_json['events'] as $event)
 		{
 			$text = $event['message']['text'];
 			
-			if($text == "@บอท"){
-				
-				$reply_message = "กรุณาใช้รูปแบบคำสั่งที่ถูกต้องงงงง!!\n";
+			$reply_message = "กรุณาใช้รูปแบบคำสั่งที่ถูกต้องงงงง!!\n";
 				
 				$reply_message .= "ฉันมีบริการให้คุณสั่งได้ ดังนี้...\n";
 				
 				$reply_message .= "พิมพ์ว่า \"@บอท ขอรายชื่อนิสิตทั้งหมด\"\n";
 				$reply_message .= "พิมพ์ว่า \"@บอท ขอรายชื่อนิสิต รหัส 61160xxx\"\n";
 				$reply_message .= "พิมพ์ว่า \"@บอท ขอรหัส FTP ของ s61160xxx\"\r\n";
-			}else if($text == "@บอทขอรายชื่อนิสิตทั้งหมด"){
+			
+			if($text == "@บอท ขอรายชื่อนิสิตทั้งหมด"){
 					$reply_message = mySQL_selectAll('http://bot.kantit.com/json_select_users.php');
 				}else if($text == "ขอรายชื่อนิสิต รหัส"){
 					$reply_message = mySQL_selectAll('http://bot.kantit.com/json_select_users.php?sid='.$txts[3]);
@@ -31,7 +30,7 @@ foreach ($request_json['events'] as $event)
 					$reply_message = mySQL_selectFTP('http://bot.kantit.com/json_select_ftp.php?sid='.$txts[4]);					
 				}	
 			else{ 
-			
+			//
 			}
 			
 		} else {
