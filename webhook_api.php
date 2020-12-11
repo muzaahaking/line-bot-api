@@ -14,15 +14,15 @@ foreach ($request_json['events'] as $event)
 		{
 			$text = $event['message']['text'];
 			
-			$text = explode(" ", $text);
+			$texts = explode(" ", $text);
 			
-			if($text[0] == "@บอท"){
+			if($texts[0] == "@บอท"){
 				if($text[1] == "ขอรายชื่อนิสิตทั้งหมด"){
 					$reply_message = mySQL_selectAll('http://bot.kantit.com/json_select_users.php');
-				}else if($text[1] == "ค้นหาชื่อนิสิต"){
-					$reply_message = mySQL_selectAll('http://bot.kantit.com/json_select_users.php?sid='.$txts[3]);
-				}else if($text[1] == "ขอรหัส"){
-					$reply_message = mySQL_selectFTP('http://bot.kantit.com/json_select_ftp.php?sid='.$txts[4]);					
+				}else if($texts[1] == "ค้นหาชื่อนิสิต"){
+					$reply_message = mySQL_selectAll('http://bot.kantit.com/json_select_users.php?sid='.$texts[3]);
+				}else if($texts[1] == "ขอรหัส"){
+					$reply_message = mySQL_selectFTP('http://bot.kantit.com/json_select_ftp.php?sid='.$texts[4]);					
 				}	
 			else{ 
 			$reply_message = "กรุณาใช้รูปแบบคำสั่งที่ถูกต้องงงงง!!\n";
