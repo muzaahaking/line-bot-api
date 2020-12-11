@@ -36,8 +36,7 @@ foreach ($request_json['events'] as $event)
 				
 				
 			else{ 
-			//$reply_message = "กรุณาใช้รูปแบบคำสั่งที่ถูกต้องงงงง!!\n";
-				
+			//$reply_message = "กรุณาใช้รูปแบบคำสั่งที่ถูกต้องงงงง!!\n";				
 				
 			}
 			
