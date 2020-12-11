@@ -25,13 +25,12 @@ foreach ($request_json['events'] as $event)
 					$reply_message = mySQL_selectFTP('http://bot.kantit.com/json_select_ftp.php?sid='.$texts[4]);					
 				}	
 			else{ 
-			$reply_message = "กรุณาใช้รูปแบบคำสั่งที่ถูกต้องงงงง!!\n";
+			//$reply_message = "กรุณาใช้รูปแบบคำสั่งที่ถูกต้องงงงง!!\n";
 				
-				$reply_message .= "ฉันมีบริการให้คุณสั่งได้ ดังนี้...\n";
-				
-				$reply_message .= "พิมพ์ว่า \"@บอท ขอรายชื่อนิสิตทั้งหมด\"\n";
-				$reply_message .= "พิมพ์ว่า \"@บอท ค้นหาชื่อนิสิต รหัส s61160xxx\"\n";
-				$reply_message .= "พิมพ์ว่า \"@บอท ขอรหัส FTP ของ s61160xxx\"\r\n";
+				$reply_message .= "ฉันมีบริการให้คุณสั่งได้ ดังนี้...\n";				
+				$reply_message .= "พิมพ์ว่า \"@บอท อ่านเลขมิเตอร์ไฟฟ้า\"\n";
+				$reply_message .= "พิมพ์ว่า \"@บอท อ่านเลขมิเตอร์น้ำ\"\n";
+				$reply_message .= "พิมพ์ว่า \"@บอท ขอสรุปการเปรียบเทียบรการใช้พลังงาน\"\r\n";
 			}
 			
 			
