@@ -38,7 +38,7 @@ foreach ($request_json['events'] as $event)
 			}
 			
 		} else {
-			$reply_message = 'ฉันได้รับ "'.$event['message']['type'].'" ของคุณแล้ว!';
+			//$reply_message = 'ฉันได้รับ "'.$event['message']['type'].'" ของคุณแล้ว!';
 		}
 		
 	} else {
