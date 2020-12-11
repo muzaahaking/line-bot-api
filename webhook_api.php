@@ -18,7 +18,7 @@ foreach ($request_json['events'] as $event)
 			
 			if($text == "@บอท" || $texts[0] == "@บอท"){	
 				
-				if($text[1] == "อ่านเลขมิเตอร์ไฟฟ้า"){
+				if($texts[1] == "อ่านเลขมิเตอร์ไฟฟ้า"){
 					$reply_message = mySQL_selectAll('http://bot.kantit.com/json_select_users.php');
 				}else if($texts[1] == "อ่านเลขมิเตอร์น้ำ"){
 					$reply_message = mySQL_selectAll('http://bot.kantit.com/json_select_users.php?sid='.$texts[3]);
