@@ -40,7 +40,7 @@ foreach ($request_json['events'] as $event)
 		$reply_message = 'ฉันได้รับ Event "' . $event['type'] . '" ของคุณแล้ว!';
 	}
 	
-	if($reply_message == null || $reply_message == ""){ $reply_message =  'ขออภัยฉันไม่สามารถตอบกลับข้อความ "'. $text . '" ของคุณ!'; }
+	//if($reply_message == null || $reply_message == ""){ $reply_message =  'ขออภัยฉันไม่สามารถตอบกลับข้อความ "'. $text . '" ของคุณ!'; }
 		
 	// reply message
 	$post_header = array('Content-Type: application/json', 'Authorization: Bearer ' . $channelAccessToken);	
