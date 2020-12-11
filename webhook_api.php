@@ -18,17 +18,18 @@ foreach ($request_json['events'] as $event)
 			
 			if($text == "@บอท" || $texts[0] == "@บอท"){	
 				
-				//if($text[1] == "ขอรายชื่อนิสิตทั้งหมด"){
-				//	$reply_message = mySQL_selectAll('http://bot.kantit.com/json_select_users.php');
-				//}else if($texts[1] == "ค้นหาชื่อนิสิต"){
-				//	$reply_message = mySQL_selectAll('http://bot.kantit.com/json_select_users.php?sid='.$texts[3]);
-				//}else if($texts[1] == "ขอรหัส"){
-				//	$reply_message = mySQL_selectFTP('http://bot.kantit.com/json_select_ftp.php?sid='.$texts[4]);					
-				//}else{
-				$reply_message .= "ฉันมีบริการให้คุณสั่งได้ ดังนี้...\n";				
-				$reply_message .= "พิมพ์ว่า \"@บอท อ่านเลขมิเตอร์ไฟฟ้า\"\n";
-				$reply_message .= "พิมพ์ว่า \"@บอท อ่านเลขมิเตอร์น้ำ\"\n";
-				$reply_message .= "พิมพ์ว่า \"@บอท ขอสรุปการเปรียบเทียบรการใช้พลังงาน\"\r\n";
+				if($text[1] == "อ่านเลขมิเตอร์ไฟฟ้า"){
+					$reply_message = mySQL_selectAll('http://bot.kantit.com/json_select_users.php');
+				}else if($texts[1] == "อ่านเลขมิเตอร์น้ำ"){
+					$reply_message = mySQL_selectAll('http://bot.kantit.com/json_select_users.php?sid='.$texts[3]);
+				}else if($texts[1] == "ขอสรุปการเปรียบเทียบรการใช้พลังงาน"){
+					$reply_message = mySQL_selectFTP('http://bot.kantit.com/json_select_ftp.php?sid='.$texts[4]);					
+				}else{
+					$reply_message .= "ฉันมีบริการให้คุณสั่งได้ ดังนี้...\n";				
+					$reply_message .= "พิมพ์ว่า \"@บอท อ่านเลขมิเตอร์ไฟฟ้า\"\n";
+					$reply_message .= "พิมพ์ว่า \"@บอท อ่านเลขมิเตอร์น้ำ\"\n";
+					$reply_message .= "พิมพ์ว่า \"@บอท ขอสรุปการเปรียบเทียบรการใช้พลังงาน\"\r\n";
+				}
 			}	
 		
 		} else {
