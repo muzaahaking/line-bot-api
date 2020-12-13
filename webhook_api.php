@@ -88,6 +88,21 @@ function mySQL_selectFTP($url)
 	return "รหัส FTP ของคุณคือ ".$data;
 }
 
+function mySQL_SET($url)
+{
+	$result = file_get_contents($url);
+	
+	$result_json = json_decode($result, true); //var_dump($result_json);
+	
+	$data = "ผลลัพธ์:\r\n";
+		
+	foreach($result_json as $values) {
+		$data .= $values["results"] . "\r\n";
+	}
+	
+	return "cmd=".$data;
+}
+
 
 function reply_message_1($url, $post_header, $post_body)
 {
