@@ -25,7 +25,7 @@ foreach ($request_json['events'] as $event)
 				}else if($texts[1] == "ขอสรุปการเปรียบเทียบรการใช้พลังงาน"){
 					$reply_message = mySQL_selectFTP('http://bot.kantit.com/json_select_ftp.php?sid='.$texts[4]);					
 				}else if($texts[1] == "อ่านเลขมิเตอร์น้ำทังหมด"){
-					$reply_message = mySQL_selectAll('http://bot.kantit.com/json_select_users.php?sid='.$texts[3]);
+					$reply_message = "OK!!! สักครู่ครับ!!";
 				}else{
 					$reply_message .= "ฉันมีบริการให้คุณสั่งได้ ดังนี้...\n";				
 					$reply_message .= "พิมพ์ว่า \"@บอท อ่านเลขมิเตอร์ไฟฟ้า\"\n";
